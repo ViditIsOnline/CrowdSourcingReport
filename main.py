@@ -71,6 +71,8 @@ class PrivacyPolicyHandler(BaseHandler):
 class LoginHandler(BaseHandler):
 	def get(self):
 		self.render("login.html")
+	def post(self):
+		self.render("login.html")
 		
 class SignupHandler(BaseHandler):
 	def get(self):
@@ -78,9 +80,9 @@ class SignupHandler(BaseHandler):
 
 class RedirectHandler(BaseHandler):
 	def get(self):
-		self.render("Redirect.html")
+		self.render("redirect.html")
 	def post(self):
-		self.render("Redirect.html")
+		self.render("redirect.html")
 
 class SearchHandler(BaseHandler):
 	def post(self):
@@ -99,5 +101,5 @@ class ProjectPageHandler(BaseHandler):
         self.render("projectPage.html")			
 		
 
-app = webapp2.WSGIApplication([('/', MainPageHandler),('/features', FeatureHandler),('/about', AboutHandler),('/explore', ExploreHandler), ('/WhatWeDo', WhatWeDoHandler),('/PrivacyPolicy', PrivacyPolicyHandler),('/Faq', FaqHandler),('/TermsOfUse', TermsOfUseHandler),('/Media', MediaHandler),('/Customers', CustomersHandler), ('/login', LoginHandler), ('/search', SearchHandler), ('/project', ProjectPageHandler),('/Signup', SignupHandler),('/Redirect', RedirectHandler)],debug=True)
+app = webapp2.WSGIApplication([('/', MainPageHandler),('/features', FeatureHandler),('/about', AboutHandler),('/explore', ExploreHandler), ('/WhatWeDo', WhatWeDoHandler),('/PrivacyPolicy', PrivacyPolicyHandler),('/Faq', FaqHandler),('/TermsOfUse', TermsOfUseHandler),('/Media', MediaHandler),('/Customers', CustomersHandler), ('/Login', LoginHandler), ('/search', SearchHandler), ('/project', ProjectPageHandler),('/Signup', SignupHandler),('/Redirect', RedirectHandler)],debug=True)
 
